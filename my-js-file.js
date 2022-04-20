@@ -18,3 +18,10 @@ for (i = 0; i < boxes.length; i +=1) {
         });
     };
 
+const resetBtn = document.querySelector('#reset');
+
+resetBtn.addEventListener('click', () => {
+    for (i = 0; i < boxes.length; i +=1) {
+        boxes[i].setAttribute('style', `background: none`);
+    };
+});
