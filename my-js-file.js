@@ -11,17 +11,42 @@ function random(num) {
 
 const boxes = document.querySelectorAll('.box');
 
-for (i = 0; i < boxes.length; i +=1) {
-    boxes[i].addEventListener('mouseover', (e) => {
-        e.target.setAttribute('style', `background: rgb(${random(255)}, ${random(255)}, ${random(255)}`);
-        console.log(e.target);
-        });
-    };
-
 const resetBtn = document.querySelector('#reset');
 
 resetBtn.addEventListener('click', () => {
     for (i = 0; i < boxes.length; i +=1) {
         boxes[i].setAttribute('style', `background: none`);
     };
+    for (i = 0; i < boxes.length; i +=1) {
+        boxes[i].addEventListener('mouseover', (e) => {
+            e.target.setAttribute('style', `background: rgb(${random(255)}, ${random(255)}, ${random(255)}`);
+            console.log(e.target);
+            });
+        };
 });
+
+const colorBtn = document.querySelector('#color-choice');
+
+function singleColor() {
+    randomColor = `rgb(${random(255)}, ${random(255)}, ${random(255)}`;
+    for (i = 0; i < boxes.length; i +=1) {
+        boxes[i].addEventListener('mouseover', (e) => {
+            e.target.setAttribute('style', `background: ${randomColor}`);
+            console.log(e.target);
+            });
+        };
+}
+
+colorBtn.addEventListener('click', singleColor);
+
+const rainbowBtn = document.querySelector('#rainbow');
+rainbowBtn.addEventListener('click', rainbowColor);
+
+function rainbowColor() {
+    for (i = 0; i < boxes.length; i +=1) {
+        boxes[i].addEventListener('mouseover', (e) => {
+            e.target.setAttribute('style', `background: rgb(${random(255)}, ${random(255)}, ${random(255)}`);
+            console.log(e.target);
+            });
+        };
+}
