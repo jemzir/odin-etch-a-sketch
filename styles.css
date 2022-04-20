@@ -7,9 +7,50 @@
     border: black solid;
     justify-content: space-between;
     flex-direction: column;
-};
+    background-color: none;
+}
 
-.box {
-    background-color: blue;
-    border: 2px bisque solid;
-};
+body {
+    background-color: rgb(206, 229, 249);
+}
+#reset {
+    border: 1px solid;
+    margin: 10px;
+    box-shadow: inset 1px -1px lightgray;
+    background-color: rgb(213, 231, 239);
+    font-family: 'Times New Roman', Times, serif;
+    width: 120px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#reset:hover {
+    background-color: rgb(240, 248, 255);
+}
+
+#reset:active {
+    background-color: rgb(96, 100, 103);
+    color: aliceblue;
+}
+
+#color-choice {
+    border: 1px solid;
+    margin: 10px;
+    box-shadow: inset 1px -1px lightgray;
+    background-color: rgb(213, 231, 239);
+    font-family: 'Times New Roman', Times, serif;
+    width: 120px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#color-choice:hover {
+    background-color: rgb(240, 248, 255);
+}
+
+#color-choice:active {
+    background-color: rgb(96, 100, 103);
+    color: aliceblue;
+}
